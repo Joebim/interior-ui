@@ -19,6 +19,7 @@ import ballRed from "../assets/images/ball-red.png"
 import star from "../assets/images/star.png"
 import cloud from "../assets/images/cloud.png"
 import Carousel from "../components/Carousel";
+import Loader from "./Loader";
 
 
 
@@ -54,8 +55,13 @@ export default function Home() {
 
   }
 
+
+
   console.log('data', data)
   console.log('currentSlide', currentSlide)
+  if (!data) {
+    return <div><Loader/></div>; // You can replace this with a loading spinner or message
+  }
 
   return (
     <>
@@ -114,7 +120,7 @@ export default function Home() {
                   <img src={cloud} alt="" className="h-[50px] z-[4] ml-[-200px]"/>
 
                 </div>
-                <Polygon style={{ color: "#74ff8b", transform: `rotate(${currentSlide * 50}deg)` }} className=" duration-1000 h-[500px]" />
+                <Polygon style={{ color: `${data[currentSlide]?.themeColor}`, transform: `rotate(${currentSlide * 50}deg)` }} className=" duration-1000 h-[500px]" />
 
               </div>
 
