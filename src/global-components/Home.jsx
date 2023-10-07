@@ -14,9 +14,6 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { ReactComponent as Polygon } from '../assets/images/polygon.svg'
-import ballPink from "../assets/images/ball-pink.png"
-import ballRed from "../assets/images/ball-red.png"
-import star from "../assets/images/star.png"
 import cloud from "../assets/images/cloud.png"
 import Carousel from "../components/Carousel";
 import Loader from "./Loader";
@@ -60,7 +57,7 @@ export default function Home() {
   console.log('data', data)
   console.log('currentSlide', currentSlide)
   if (!data) {
-    return <div><Loader/></div>; // You can replace this with a loading spinner or message
+    return <div><Loader /></div>;
   }
 
   return (
@@ -107,7 +104,7 @@ export default function Home() {
 
                   <div className="h-[180px] w-[200px] z-[3] mt-[150px] flex overflow-hidden">
                     <div className="h-full flex flex-row duration-1000"
-                    style={{width: `${data?.length * 200}px`, transform: `translateX(-${(currentSlide) * 200}px)`}}>
+                      style={{ width: `${data?.length * 200}px`, transform: `translateX(-${(currentSlide) * 200}px)` }}>
                       {data?.map((item) => (
                         <div key={item.set_id} className="w-[200px]">
                           <h1 className="text-[40px] font-bold text-center text-white w-full">{item.type}</h1>
@@ -117,7 +114,7 @@ export default function Home() {
 
                   </div>
 
-                  <img src={cloud} alt="" className="h-[50px] z-[4] ml-[-200px]"/>
+                  <img src={cloud} alt="" className="h-[50px] z-[4] ml-[-200px]" />
 
                 </div>
                 <Polygon style={{ color: `${data[currentSlide]?.themeColor}`, transform: `rotate(${currentSlide * 50}deg)` }} className=" duration-1000 h-[500px]" />
