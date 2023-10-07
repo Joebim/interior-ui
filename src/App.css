@@ -1,7 +1,38 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
+/* carousel.css */
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+}
 
+.carousel-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item {
+    padding: 20px;
+    text-align: center;
+}
+
+.item-content {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.item-image {
+    max-width: 100px;
+    margin-top: 10px;
+}
+
+.selected-set {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* .control-panel {
+    box-shadow: 6px 63px 101px -40px rgba(0,0,0,0.17) !important;
+    -webkit-box-shadow: 6px 63px 101px -40px rgba(0,0,0,0.17) !important;
+    -moz-box-shadow: 6px 63px 101px -40px rgba(0,0,0,0.17) !important;
+} */
