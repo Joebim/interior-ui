@@ -86,7 +86,7 @@ export default function Home() {
                             style={{ transform: `rotate(${(currentSlide + item_set?.id) * 40}deg)`, transitionDuration: `${1000}ms` }}>
                             <img src={item_set?.image} alt=""
                               style={{ width: `${currentSlide !== 0 ? 250 : 180}px` }}
-                              className={``}
+                              className={`sm:w-auto w-[150px]`}
                             />
                           </div>
 
@@ -99,7 +99,7 @@ export default function Home() {
                 </div>
 
               </div>
-              <div className="mt-[-14%] ml-[-20%] relative w-[100%]">
+              <div className="mt-[0%] sm:mt-[-14%] ml-[4%] sm:ml-[-20%] relative w-[100%]">
                 <div className="absolute h-full w-full flex flex-col justify-center items-center overflow-hidden">
 
                   <div className="h-[180px] w-[200px] z-[3] mt-[150px] flex overflow-hidden">
@@ -117,7 +117,7 @@ export default function Home() {
                   <img src={cloud} alt="" className="h-[50px] z-[4] ml-[-200px]" />
 
                 </div>
-                <Polygon style={{ color: `${data[currentSlide]?.themeColor}`, transform: `rotate(${currentSlide * 50}deg)` }} className=" duration-1000 h-[500px]" />
+                <Polygon style={{ color: `${data[currentSlide]?.themeColor}`, transform: `rotate(${currentSlide * 50}deg)` }} className=" duration-1000 h-[400px] sm:h-[500px]" />
 
               </div>
 
@@ -129,7 +129,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col w-full gap-[30px]">
                 <div className="pr-[55px] pl-[40px] ">
-                  <h1 className="text-[25px] font-medium">My<br />storehouse</h1>
+                  <h1 className="text-[25px] font-medium text-right sm:text-left">My<br />storehouse</h1>
 
                 </div>
 
