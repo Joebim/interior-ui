@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Button from "../components/Button.Jsx";
+import Button from "../components/Button.jsx";
 import axios from "axios"
 import { BsCarFront } from "react-icons/bs";
 import { LiaTapeSolid } from "react-icons/lia";
