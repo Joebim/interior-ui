@@ -26,6 +26,8 @@ export default function Store() {
   const [data, setData] = useState()
   const [currentSlide, setCurrentSlide] = useState(0)
 
+
+
   useEffect(() => {
     const baseUrl = 'https://eclectic-longma-326fe9.netlify.app'; // Base URL of your site
     const functionPath = '/.netlify/functions/api'; // Path to the Netlify Function endpoint
@@ -62,8 +64,8 @@ export default function Store() {
 
   return (
     <>
-      <div className="w-full sm:h-[100vh] p-0 sm:p-[20px] justify-center items-center bg-gray-50">
-        <div className="h-full relative w-full justify-end items-end overflow-hidden bg-white sm:rounded-[40px] shadow-lg flex flex-col gap-[30px]">
+      <div className="w-full sm:h-[100vh] p-0 sm:p-[20px] sm:pt-[70px] justify-center items-center bg-gray-50">
+        <div className="h-full relative w-full justify-end items-end overflow-hidden bg-white sm:rounded-[20px] shadow-lg flex flex-col gap-[30px]">
           <div className="flex-[9] flex flex-col sm:flex-row">
             <div className="flex-[1] relative mt-[-10px]">
               <div className="z-[5] absolute h-[600px] w-[600px] mt-[-27%] ml-[-30%]"

@@ -6,7 +6,7 @@ export default function Loader() {
         <div className="h-[100vh] w-full flex justify-center items-center bg-black-100">
             <GooSpinner
                 size={60}
-                color="#ED7534"
+                color="#e5ba42"
                 loading={true}
             />
         </div>

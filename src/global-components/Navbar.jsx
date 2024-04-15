@@ -27,7 +27,7 @@ export default function Navbar() {
     ]
 
     return (
-        <div className="absolute bg-white h-[70px] px-[70px] w-full flex flex-row items-center justify-start gap-[50px]">
+        <div className={`absolute ${location.pathname === '/store' ? "bg-gray-50" : "bg-white"} h-[70px] px-[70px] w-full flex flex-row items-center justify-start gap-[50px]`}>
             <div className="flex flex-row gap-[10px] items-center">
                 <Logo style={{ color: "#000000" }} className=" h-[35px]" />
                 <h1 className='font-bold'>Capsule</h1>
