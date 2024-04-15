@@ -11,6 +11,9 @@ import { slideImages } from '../components/slideimages';
 
 export default function ProductList() {
   const [clicked, setClicked] = useState(false)
+  const [togglePopularity, setTogglePopularity] = useState(false)
+
+  console.log('togglePopularity', togglePopularity)
 
   return (
     <div className="flex flex-row p-[50px] gap-[30px]">
@@ -128,9 +131,18 @@ export default function ProductList() {
                     <div className="flex flex-row justify-between rounded-[15px] bg-black h-[50px] py-[10px] px-[20px]">
                         <div className="flex flex-row items-center gap-[10px]">
                             <p className="text-white text-[12px]">Sort by</p>
-                            <div className="flex flex-row gap-[10px] px-[15px] py-[5px] bg-white rounded-[10px]">
-                                <p className="text-black text-[12px]">Popularity</p>
-                                <MdKeyboardArrowDown />
+                            <div className="relative flex flex-row bg-white rounded-[10px] cursor-pointer z-[20]"
+                            onClick={()=> {
+                              setTogglePopularity(!togglePopularity)
+                            }}
+                            >
+                              <div className={`absolute bg-white w-full duration-200 mt-[20px] rounded-b-[10px] ${togglePopularity ? "shadow-md z-[19] h-[150px]" : "h-[0px] z-[-20]"} `}
+                              onMouseLeave={()=> {
+                                setTogglePopularity(false)
+                              }}
+                              ></div>
+                                <p className="text-black text-[12px] px-[15px] py-[5px]">Popularity</p>
+                                <MdKeyboardArrowDown className='mr-[10px] mt-[5px]' />
                             </div>
                         </div>
                         <div className="flex flex-row gap-[10px] items-center">
