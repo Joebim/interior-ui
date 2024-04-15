@@ -9,6 +9,7 @@ import ProductView from './pages/ProductView';
 import Store from './pages/Store';
 import Landing from './pages/Landing';
 import Navbar from './global-components/Navbar';
+import Cart from './pages/Cart';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/productlist" element={<ProductList />} />
           <Route path="/productview" element={<ProductView />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </Suspense>
     </>
