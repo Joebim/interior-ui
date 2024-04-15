@@ -54,8 +54,6 @@ export default function Store() {
 
   }
 
-
-
   console.log('data', data)
   console.log('currentSlide', currentSlide)
   if (!data) {
@@ -91,7 +89,6 @@ export default function Store() {
                               className={`sm:w-auto w-[150px]`}
                             />
                           </div>
-
 
                         ))}
                       </div>

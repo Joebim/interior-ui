@@ -102,3 +102,46 @@ body {
       transform: translateX(-50%);
     }
   }
+
+  .svg {
+    width: 16px;
+  }
+
+  .tick,
+  .circle {
+    transform-origin: center;
+  }
+
+  .tick {
+    animation: grow 0.8s ease-in-out forwards;
+  }
+
+  @keyframes grow {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .circle {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    animation: dash 0.5s linear;
+  }
+
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 1000;
+      opacity: 0;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
