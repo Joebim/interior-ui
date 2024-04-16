@@ -17,6 +17,7 @@ import { ReactComponent as Polygon } from '../assets/images/polygon.svg'
 import cloud from "../assets/images/cloud.png"
 import Carousel from "../components/Carousel.jsx";
 import Loader from "../global-components/Loader.jsx";
+import { Link } from "react-router-dom";
 
 
 
@@ -63,10 +64,10 @@ export default function Store() {
   return (
     <>
       <div className="w-full sm:h-[100vh] p-0 sm:p-[20px] sm:pt-[70px] justify-center items-center bg-gray-50">
-        <div className="h-full relative w-full justify-end items-end overflow-hidden bg-white sm:rounded-[20px] shadow-lg flex flex-col gap-[30px]">
+        <div className="h-full relative w-full justify-end sm:items-end overflow-hidden bg-white sm:rounded-[20px] shadow-lg flex flex-col gap-[30px]">
           <div className="flex-[9] flex flex-col sm:flex-row">
-            <div className="flex-[1] relative mt-[-10px]">
-              <div className="z-[5] absolute h-[600px] w-[600px] mt-[-27%] ml-[-30%]"
+            <div className="flex-[1] relative  ml-[-40%] sm:ml-0 mt-[-10px]">
+              <div className="z-[5] absolute h-[600px] w-[600px] mt-[-27%]  ml-[-15%] sm:ml-[-30%]"
                 // style={{ transform: `rotate(${currentSlide == 0 ? 97 : currentSlide == 1 ? 298 : currentSlide == 2 ? 140 : ""}deg`, transitionDuration: `1000ms` }}
                 style={{ transform: `rotate(${(currentSlide * 200) + 97}deg`, transitionDuration: `1000ms` }}
 
@@ -123,7 +124,10 @@ export default function Store() {
             </div>
             <div className="flex-[1] w-full flex flex-col gap-[30px] ">
               <div className="flex flex-row items-center justify-end pt-[40px] pr-[20px] sm:pr-[40px]">
-                <Button><CgIfDesign className="text-[20px] text-[black]" /></Button>
+                <Button
+                link="/productlist"
+                title="Explore Store"
+                ><CgIfDesign className="text-[20px] text-[black]" /></Button>
 
               </div>
               <div className="flex flex-col w-full gap-[30px]">
@@ -171,7 +175,7 @@ export default function Store() {
             </div>
 
           </div>
-          <div className="absolute w-[60%] pb-[30px] flex items-end justify-start">
+          <div className="absolute w-[60%] pb-[30px] flex items-end justify-start right-[30%] sm:right-auto">
             <div className="control-panel pl-[20px] w-[300px] h-[60px] rounded-full flex flex-row justify-around items-center bg-white shadow-[0px_50px_100px_0px_#cbd5e0]">
               <TbRulerMeasure className="text-[20px] cursor-pointer text-[black]" />
               < FiEdit3 className="text-[20px] cursor-pointer text-[black]" />
@@ -180,18 +184,24 @@ export default function Store() {
                 <MdKeyboardArrowDown className="text-[20px] text-[black]" />
               </div>
               <hr className="h-[20px] bg-gray-400 w-[1.5px]" />
-              <div className="h-[50px] w-[50px] cursor-pointer flex justify-center items-center rounded-[15px] bg-black">
+              <Link to="/cart">
+              <div title="Checkout" className="h-[50px] w-[50px] cursor-pointer flex justify-center items-center rounded-[15px] bg-black">
                 <HiArrowNarrowRight className="text-[20px] text-white" />
               </div>
+              </Link>
+              
             </div>
           </div>
-          <div className="flex-[1] flex flex-row w-full items-center justify-between pb-[40px] px-[20px] sm:px-[40px]">
-            <div className="flex  flex-row gap-[20px]">
+          <div className="flex-[1] flex flex-row w-full items-center justify-end pb-[40px] px-[20px] sm:px-[40px]">
+            {/* <div className="flex  flex-row gap-[20px]">
               <Button><BsCarFront className="text-[20px] text-[black]" /></Button>
               <Button><LiaTapeSolid className="text-[20px] text-[black]" /></Button>
               <Button><PiPaintBucket className="text-[20px] text-[black]" /></Button>
-            </div>
-            <Button><VscLayoutSidebarRight className="text-[20px] text-[black]" /></Button>
+            </div> */}
+            <Button
+            link="/"
+            title="Exit Store"
+            ><VscLayoutSidebarRight className="text-[20px] text-[black]" /></Button>
           </div>
         </div>
 
