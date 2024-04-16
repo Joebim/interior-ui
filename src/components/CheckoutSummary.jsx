@@ -52,15 +52,12 @@ export default function CheckoutSummary(props) {
 
         </div>
 
-        <Link to="/checkout">
           <button className="flex flex-row justify-center items-center p-[10px] h-[50px] w-full bg-black cursor-pointer">
             <div className="flex flex-row items-center">
               <p className='text-white text-[11px] mr-[3px]'>Proceed to Checkout</p>
               <IoIosAdd className="w-[20px] h-[20px] text-white-100" />
             </div>
-
           </button>
-        </Link>
 
       </div>
 
